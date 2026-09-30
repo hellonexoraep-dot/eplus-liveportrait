@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>Eplus AI Video Call</title>
+  <link
+    rel="stylesheet"
+    href="style.css"
+  >
+</head>
+
+<body>
+
+  <main>
+
+    <h1>Eplus AI Video Call</h1>
+
+    <!-- WRAPPER FOR EVERYTHING ONLY YOU SHOULD SEE -->
+    <div id="controller-ui">
+
+      <p id="status">
+        Loading face tracker...
+      </p>
+
+      <!-- CUSTOM ROOM LINK PLACEHOLDER (HOST ONLY) -->
+      <section class="room-section">
+        <h2>Room Setup</h2>
+        <input 
+          type="text" 
+          id="customRoomInput" 
+          placeholder="Type custom room name here..." 
+        />
+        <button id="setRoomButton">Set Room Link</button>
+      </section>
+
+      <!-- CAMERA -->
+      <section class="camera-section">
+        <video
+          id="camera"
+          autoplay
+          playsinline
+          muted
+        ></video>
+
+        <button
+          id="startButton"
+          disabled
+        >
+          Loading...
+        </button>
+      </section>
+
+      <!-- CONTROLS -->
+      <section class="controls">
+        <button
+          id="apiTestButton"
+        >
+          Test LivePortrait API
+        </button>
+
+        <button
+          id="callButton"
+        >
+          Prepare Video Call
+        </button>
+
+        <button
+          id="stopButton"
+        >
+          Stop
+        </button>
+      </section>
+
+      <!-- FACE DATA -->
+      <section class="debug">
+        <h2>Face Tracking</h2>
+        <p>
+          Mouth:
+          <strong id="mouthValue">0.00</strong>
+        </p>
+        <p>
+          Blink:
+          <strong id="blinkValue">0.00</strong>
+        </p>
+        <p>
+          Smile:
+          <strong id="smileValue">0.00</strong>
+        </p>
+      </section>
+
+      <!-- SERVER -->
+      <section class="connection">
+        <h2>LivePortrait Server</h2>
+        <p id="serverStatus">
+          Not connected
+        </p>
+      </section>
+
+    </div><!-- END OF CONTROLLER UI -->
+
+
+    <!-- AVATAR (Person B and you both see this canvas section) -->
+    <section class="avatar-section">
+      <h2>Live Avatar</h2>
+      <canvas
+        id="avatarCanvas"
+      ></canvas>
+    </section>
+
+  </main>
+
+  <!-- API CLIENT -->
+  <script src="liveportrait-api.js"></script>
+
+  <!-- MAIN APP -->
+  <script
+    type="module"
+    src="app.js"
+  ></script>
+
+</body>
+
+</html>
