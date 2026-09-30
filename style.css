@@ -1,0 +1,353 @@
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+
+  margin: 0;
+
+  background: #101010;
+
+  color: white;
+
+  font-family: Arial, sans-serif;
+
+  text-align: center;
+
+}
+
+
+main {
+
+  width: 100%;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  padding: 20px;
+
+}
+
+
+h1 {
+
+  margin: 5px 0 10px;
+
+  font-size: 30px;
+
+}
+
+
+h2 {
+
+  margin-top: 0;
+
+}
+
+
+#status {
+
+  color: #00d66b;
+
+  min-height: 24px;
+
+}
+
+
+/* ============================= */
+/* ROOM SECTION (HOST ONLY) */
+/* ============================= */
+
+.room-section {
+
+  background: #191919;
+
+  border-radius: 20px;
+
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+}
+
+
+.room-section input {
+
+  width: 100%;
+
+  padding: 12px;
+
+  border-radius: 12px;
+
+  border: 1px solid #333;
+
+  background: #222;
+
+  color: white;
+
+  font-size: 15px;
+
+  margin-bottom: 10px;
+
+  text-align: center;
+
+}
+
+
+.room-section input:focus {
+
+  outline: none;
+
+  border-color: #087d3f;
+
+}
+
+
+.room-section button {
+
+  width: 100%;
+
+  border: none;
+
+  border-radius: 12px;
+
+  padding: 12px;
+
+  background: #087d3f;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+}
+
+
+/* ============================= */
+/* CAMERA */
+/* ============================= */
+
+.camera-section {
+
+  position: relative;
+
+  width: 100%;
+
+  background: #222;
+
+  border-radius: 25px;
+
+  overflow: hidden;
+
+  margin-bottom: 25px;
+
+}
+
+
+#camera {
+
+  display: block;
+
+  width: 100%;
+
+  min-height: 300px;
+
+  object-fit: cover;
+
+  transform: scaleX(-1);
+
+}
+
+
+#startButton {
+
+  position: absolute;
+
+  left: 50%;
+
+  bottom: 20px;
+
+  transform: translateX(-50%);
+
+  border: none;
+
+  border-radius: 40px;
+
+  padding: 16px 30px;
+
+  background: #087d3f;
+
+  color: white;
+
+  font-size: 18px;
+
+  font-weight: bold;
+
+}
+
+
+#startButton:disabled {
+
+  background: #555;
+
+  opacity: 0.8;
+
+}
+
+
+#startButton:active {
+
+  transform:
+    translateX(-50%)
+    scale(0.96);
+
+}
+
+
+/* ============================= */
+/* AVATAR */
+/* ============================= */
+
+.avatar-section {
+
+  background: #181818;
+
+  border-radius: 30px;
+
+  padding: 20px;
+
+  margin-bottom: 20px;
+
+}
+
+
+#avatarCanvas {
+
+  display: block;
+
+  width: 100%;
+
+  max-width: 600px;
+
+  height: auto;
+
+  margin: auto;
+
+  border-radius: 25px;
+
+  background: #222;
+
+}
+
+
+/* ============================= */
+/* CONTROLS */
+/* ============================= */
+
+.controls {
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+
+  margin-bottom: 20px;
+
+}
+
+
+.controls button {
+
+  width: 100%;
+
+  border: none;
+
+  border-radius: 15px;
+
+  padding: 15px;
+
+  background: #087d3f;
+
+  color: white;
+
+  font-size: 17px;
+
+  font-weight: bold;
+
+}
+
+
+.controls button:active {
+
+  transform: scale(0.98);
+
+}
+
+
+/* ============================= */
+/* DEBUG */
+/* ============================= */
+
+.debug {
+
+  background: #191919;
+
+  border-radius: 20px;
+
+  padding: 15px;
+
+  margin-bottom: 20px;
+
+}
+
+
+.debug p {
+
+  font-size: 16px;
+
+  margin: 10px;
+
+}
+
+
+.debug strong {
+
+  color: #00d66b;
+
+}
+
+
+/* ============================= */
+/* SERVER */
+/* ============================= */
+
+.connection {
+
+  background: #191919;
+
+  border-radius: 20px;
+
+  padding: 15px;
+
+}
+
+
+#serverStatus {
+
+  color: #ffb000;
+
+  font-weight: bold;
+
+}
+
+
+/* ============================= */
+/* VIEWER MODE (Clean screen for Person B) */
+/* ============================= */
+body.viewer-mode #controller-ui {
+  display: none !important;
+}
